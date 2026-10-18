@@ -1,0 +1,16 @@
+/* ClippedCircle — cursor-following spotlight primitive */
+
+.cc {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.cc-dot {
+  pointer-events: none;
+  position: absolute;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  mix-blend-mode: difference;
+}

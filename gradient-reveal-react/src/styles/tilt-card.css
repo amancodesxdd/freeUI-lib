@@ -1,0 +1,151 @@
+/* TiltCard — 3D tilt card with split badge + floating image */
+
+.tc-shell {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  transition: transform 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.tc-shell:hover {
+  transform: scale(1.04);
+}
+
+.tilt-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 224px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  transform-style: preserve-3d;
+  transition: box-shadow 0.4s ease;
+}
+
+.tc-shell:hover .tilt-card {
+  box-shadow: 0 30px 60px -34px rgba(17, 17, 20, 0.5);
+}
+
+.tc-top {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 20px 24px;
+}
+
+.tc-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+  margin-right: 8px;
+}
+
+.tc-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.tc-desc {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.tc-children {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.tc-children ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.tc-badge {
+  display: inline-flex;
+  align-items: center;
+  height: fit-content;
+  flex: none;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.tc-badge-left {
+  padding: 4px 8px;
+  border-radius: 999px 0 0 999px;
+  background: var(--pill);
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.tc-badge-right {
+  padding: 4px 8px;
+  border-radius: 0 999px 999px 0;
+  font-weight: 500;
+}
+
+.tc-badge-right.success {
+  background: rgba(16, 185, 129, 0.15);
+  color: #047857;
+}
+
+.tc-badge-right.warning {
+  background: rgba(245, 158, 11, 0.2);
+  color: #b45309;
+}
+
+:root[data-theme="dark"] .tc-badge-right.success {
+  color: #6ee7b7;
+}
+
+:root[data-theme="dark"] .tc-badge-right.warning {
+  color: #fcd34d;
+}
+
+.tc-pill {
+  height: fit-content;
+  flex: none;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--pill);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.tc-image {
+  position: absolute;
+  z-index: 2;
+  top: 108px;
+  right: -40px;
+  width: 288px;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  transform: rotate(-5deg);
+  transition: transform 0.3s ease;
+}
+
+.tc-shell:hover .tc-image {
+  transform: rotate(-3deg) translate(-2px, -4px);
+}
+
+.cc-dot.tc-shine {
+  background: #ffffff;
+}

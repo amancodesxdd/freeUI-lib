@@ -1,0 +1,81 @@
+/* VercelSnapText — scroll-snapped, spring-animated text list */
+
+.vst {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.32em;
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+  font-family: var(--sans, inherit);
+  --vst-size: clamp(1.75rem, 4vw, 4.5rem);
+}
+
+.vst-prefix {
+  flex: none;
+  font-size: var(--vst-size);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.vst-stage {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.vst-visual {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.vst-track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  will-change: transform;
+}
+
+.vst-row {
+  display: flex;
+  align-items: center;
+}
+
+.vst-label {
+  display: inline-block;
+  font-size: var(--vst-size);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--ink);
+  white-space: nowrap;
+  transform-origin: left center;
+}
+
+.vst-scroll {
+  position: absolute;
+  inset: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.vst-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.vst-section {
+  scroll-snap-align: start;
+}

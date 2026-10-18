@@ -1,0 +1,94 @@
+/* AnimateCount — number transitions with a blur + slide effect */
+
+.ac {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  font-variant-numeric: tabular-nums;
+}
+
+.ac-num {
+  display: inline-block;
+  will-change: transform, filter;
+}
+
+.ac-demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  width: 100%;
+}
+
+.ac-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.ac-value {
+  font-size: clamp(44px, 9vw, 74px);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.ac-value.sm {
+  font-size: clamp(28px, 5vw, 40px);
+}
+
+.ac-auto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.ac-tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.ac-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.ac-btn {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  border: 1px solid var(--line);
+  background: var(--field);
+  color: var(--ink);
+  font-size: 19px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.16s ease, transform 0.16s ease;
+}
+
+.ac-btn:hover {
+  background: var(--tile);
+}
+
+.ac-btn:active {
+  transform: scale(0.94);
+}
+
+.ac-btn.wide {
+  width: auto;
+  padding: 0 14px;
+  font-size: 13px;
+  font-weight: 600;
+}

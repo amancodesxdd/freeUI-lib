@@ -1,0 +1,60 @@
+/* MotionAccordion — spring-animated FAQ accordion */
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 480px;
+}
+
+.faq-item {
+  background: var(--tile);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: background 0.2s ease;
+}
+
+.faq-item.open {
+  background: var(--card);
+}
+
+.faq-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  background: none;
+  border: 0;
+  text-align: left;
+  padding: 16px 18px;
+  cursor: pointer;
+}
+
+.faq-question {
+  flex: 1;
+}
+
+.faq-icon {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  color: var(--muted);
+}
+
+.faq-panel {
+  overflow: hidden;
+}
+
+.faq-answer {
+  padding: 0 18px 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}

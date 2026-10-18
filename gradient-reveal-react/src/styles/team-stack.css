@@ -1,0 +1,125 @@
+/* TeamStack — fanned deck of member cards */
+
+.ts-deck {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.ts-stage {
+  position: relative;
+  width: 268px;
+  height: 372px;
+  perspective: 1400px;
+}
+
+.ts-card {
+  position: absolute;
+  inset: 0;
+  width: 268px;
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  padding: 16px 18px 20px;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  transform-origin: 50% 100%;
+}
+
+.ts-card:focus-visible {
+  box-shadow: 0 0 0 2px var(--bg-mid), 0 0 0 4px var(--ink);
+}
+
+.ts-card.dim {
+  background: var(--tile);
+  border-color: transparent;
+}
+
+.ts-avatar {
+  display: grid;
+  place-items: center;
+  height: 132px;
+  border-radius: 18px;
+  background: var(--tile);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.ts-card.dim .ts-avatar {
+  background: var(--rail);
+}
+
+.face {
+  width: 104px;
+  height: 104px;
+  color: var(--ink);
+}
+
+.ts-card.dim .face {
+  color: var(--muted);
+}
+
+.ts-role {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.ts-name {
+  margin: 2px 0 0;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: -0.028em;
+  color: var(--ink);
+}
+
+.ts-bio {
+  margin: 8px 0 0;
+  font-size: 14.5px;
+  line-height: 1.42;
+  color: var(--muted);
+}
+
+.ts-action {
+  position: absolute;
+  top: 32px;
+  right: 30px;
+  display: flex;
+}
+
+.ts-round {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex: none;
+  border-radius: 99px;
+  background: var(--ink);
+  color: var(--bg-hi);
+}
+
+.ts-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 34px;
+  padding: 0 15px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: var(--ink);
+  color: var(--bg-hi);
+  font-size: 13.5px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.ts-hint {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--faint);
+}

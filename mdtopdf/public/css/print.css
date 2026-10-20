@@ -1,0 +1,66 @@
+@media print {
+  html {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .md-body h1,
+  .md-body h2,
+  .md-body h3,
+  .md-body h4,
+  .md-body h5,
+  .md-body h6 {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    break-after: avoid-page;
+    page-break-after: avoid;
+  }
+
+  .md-body pre,
+  .md-body pre.code-block,
+  .md-body blockquote,
+  .md-body table,
+  .md-body figure,
+  .md-body img,
+  .md-body details,
+  .md-body ul,
+  .md-body ol,
+  .md-body li {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .md-body p,
+  .md-body li,
+  .md-body blockquote {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .md-body pre,
+  .md-body pre code {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    overflow: visible;
+  }
+
+  .md-body a {
+    color: inherit;
+    text-decoration-color: currentColor;
+  }
+
+  .md-body img {
+    max-width: 100%;
+  }
+
+  .md-body .hljs-addition,
+  .md-body .hljs-deletion {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

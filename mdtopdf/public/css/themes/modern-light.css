@@ -1,0 +1,85 @@
+.md-body[data-theme="modern-light"] {
+  --font-body: "Aptos", "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+  --font-heading: "Aptos Display", "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+
+  --paper: #fdfcf9;
+  --ink: #28251f;
+  --heading: #14120f;
+  --muted: #7b7468;
+  --rule: #e7e1d5;
+  --rule-strong: #c9c1b1;
+  --accent: #c2410c;
+  --link: #a3390e;
+  --link-underline: rgba(163, 57, 14, 0.3);
+  --marker: #b5ab99;
+  --quote-bg: #f5efe4;
+  --quote-ink: #5a5347;
+  --code-bg: #1d1c19;
+  --code-ink: #ece7dc;
+  --code-border: #302e29;
+  --code-label: #817b6e;
+  --code-inline-bg: #f2ece1;
+  --code-inline-ink: #a3390e;
+  --mark-bg: #f8dfa0;
+
+  --syn-comment: #8a9282;
+  --syn-keyword: #ff9d7a;
+  --syn-string: #a9d98b;
+  --syn-number: #f2c879;
+  --syn-title: #85c9ff;
+  --syn-type: #c9a8ff;
+  --syn-attr: #f0c674;
+  --syn-tag: #ff8f7a;
+
+  --md-line-height: 1.72;
+  --md-radius: 7px;
+}
+
+.md-body[data-theme="modern-light"] h1 {
+  font-weight: 700;
+  letter-spacing: -0.036em;
+}
+
+.md-body[data-theme="modern-light"] h1::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 3px;
+  margin-top: 0.42em;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.md-body[data-theme="modern-light"] h1 + p {
+  margin-top: 1em;
+  color: var(--muted);
+  font-size: 1.08em;
+  line-height: 1.65;
+  letter-spacing: -0.005em;
+}
+
+.md-body[data-theme="modern-light"] h2 {
+  letter-spacing: -0.024em;
+}
+
+.md-body[data-theme="modern-light"] blockquote {
+  border-left-width: 3px;
+}
+
+.md-body[data-theme="modern-light"] pre {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.md-body[data-theme="modern-light"] pre.code-block::before {
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+.md-body[data-theme="modern-light"] th {
+  color: #746c5e;
+}
+
+.md-body[data-theme="modern-light"] tbody tr:hover td {
+  background: rgba(194, 65, 12, 0.025);
+}

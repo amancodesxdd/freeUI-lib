@@ -1,0 +1,165 @@
+.md-body[data-theme="academic"] {
+  --font-body: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  --font-heading: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  --font-mono: "Cascadia Mono", "SFMono-Regular", "Courier New", monospace;
+
+  --paper: #fffdf8;
+  --ink: #24231f;
+  --heading: #161511;
+  --muted: #6f6a60;
+  --rule: #ded7c9;
+  --rule-strong: #9d9380;
+  --accent: #8b1e3f;
+  --link: #1e3a5f;
+  --link-underline: rgba(30, 58, 95, 0.32);
+  --marker: #9d9380;
+  --quote-bg: transparent;
+  --quote-ink: #48443c;
+  --code-bg: #f5f1e8;
+  --code-ink: #2b2925;
+  --code-border: #ded7c9;
+  --code-label: #7b7468;
+  --code-inline-bg: #f1ece1;
+  --code-inline-ink: #8b1e3f;
+  --mark-bg: #f6e7b5;
+
+  --syn-comment: #8a7f6d;
+  --syn-keyword: #8b1e3f;
+  --syn-string: #2f6f4e;
+  --syn-number: #9a5b13;
+  --syn-title: #1e3a5f;
+  --syn-type: #5b3d8c;
+  --syn-attr: #7c5c1e;
+  --syn-tag: #8b1e3f;
+
+  --md-line-height: 1.66;
+  --md-radius: 4px;
+}
+
+.md-body[data-theme="academic"] h1 {
+  margin-bottom: 0.35em;
+  font-size: 2.05em;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.md-body[data-theme="academic"] h1::after {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 1px;
+  margin: 0.62em auto 0;
+  background: var(--rule-strong);
+  box-shadow: 0 3px 0 var(--rule);
+}
+
+.md-body[data-theme="academic"] h1 + p {
+  margin-top: 1.35em;
+  margin-bottom: 2em;
+  color: var(--muted);
+  font-size: 1.04em;
+  font-style: italic;
+  text-align: center;
+}
+
+.md-body[data-theme="academic"] h2 {
+  padding-bottom: 0.28em;
+  border-bottom: 1px solid var(--rule);
+  font-size: 1.42em;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+}
+
+.md-body[data-theme="academic"] h3 {
+  font-size: 1.16em;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.md-body[data-theme="academic"] p {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+.md-body[data-theme="academic"] li p,
+.md-body[data-theme="academic"] blockquote p {
+  text-align: left;
+}
+
+.md-body[data-theme="academic"] blockquote {
+  padding: 1.15em 2.15em;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  border-left: 0;
+  border-radius: 0;
+  font-style: italic;
+  text-align: center;
+}
+
+.md-body[data-theme="academic"] blockquote p {
+  text-align: center;
+}
+
+.md-body[data-theme="academic"] a {
+  text-decoration-thickness: 0.06em;
+}
+
+.md-body[data-theme="academic"] code {
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+}
+
+.md-body[data-theme="academic"] pre {
+  box-shadow: none;
+}
+
+.md-body[data-theme="academic"] pre code {
+  border: 0;
+}
+
+.md-body[data-theme="academic"] pre.code-block::before {
+  font-family: var(--font-body);
+  font-style: italic;
+  letter-spacing: 0.06em;
+  text-transform: none;
+}
+
+.md-body[data-theme="academic"] table {
+  border-top: 1.5px solid var(--rule-strong);
+  border-bottom: 1.5px solid var(--rule-strong);
+  font-size: 0.9em;
+}
+
+.md-body[data-theme="academic"] th {
+  border-bottom: 1px solid var(--rule-strong);
+  font-size: 0.86em;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.md-body[data-theme="academic"] td {
+  border-bottom: 1px solid var(--rule);
+}
+
+.md-body[data-theme="academic"] tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.md-body[data-theme="academic"] hr {
+  width: 36%;
+  margin: 2.6em auto;
+  background: var(--rule-strong);
+}
+
+.md-body[data-theme="academic"] img {
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+}
+
+.md-body[data-theme="academic"] sup,
+.md-body[data-theme="academic"] sub {
+  line-height: 0;
+}

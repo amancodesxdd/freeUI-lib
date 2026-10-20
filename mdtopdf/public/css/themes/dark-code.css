@@ -1,0 +1,112 @@
+.md-body[data-theme="dark-code"] {
+  --font-body: "Aptos", "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+  --font-heading: "Aptos Display", "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+
+  --paper: #121418;
+  --ink: #d4d8df;
+  --heading: #f4f6f9;
+  --muted: #8b95a5;
+  --rule: #252b34;
+  --rule-strong: #3a4553;
+  --accent: #5eead4;
+  --link: #7dd3fc;
+  --link-underline: rgba(125, 211, 252, 0.34);
+  --marker: #5eead4;
+  --quote-bg: #181d24;
+  --quote-ink: #b2bcc9;
+  --code-bg: #0b0d11;
+  --code-ink: #d8e1eb;
+  --code-border: #242b36;
+  --code-label: #5eead4;
+  --code-inline-bg: #1c232c;
+  --code-inline-ink: #7dd3fc;
+  --mark-bg: #3f3a1d;
+
+  --syn-comment: #667384;
+  --syn-keyword: #f0a8ff;
+  --syn-string: #9ee493;
+  --syn-number: #ffd479;
+  --syn-title: #7dd3fc;
+  --syn-type: #c4b5fd;
+  --syn-attr: #f9c86b;
+  --syn-tag: #ff9b8a;
+
+  --md-line-height: 1.74;
+  --md-radius: 8px;
+}
+
+.md-body[data-theme="dark-code"] h1 {
+  letter-spacing: -0.038em;
+}
+
+.md-body[data-theme="dark-code"] h1 + p {
+  margin-top: 1em;
+  color: var(--muted);
+  font-size: 1.06em;
+}
+
+.md-body[data-theme="dark-code"] h2 {
+  color: var(--heading);
+  letter-spacing: -0.02em;
+}
+
+.md-body[data-theme="dark-code"] strong {
+  color: #ffffff;
+}
+
+.md-body[data-theme="dark-code"] a {
+  text-decoration-color: var(--link-underline);
+}
+
+.md-body[data-theme="dark-code"] blockquote {
+  border-left-color: var(--accent);
+  background: linear-gradient(90deg, rgba(94, 234, 212, 0.07), var(--quote-bg) 42%);
+}
+
+.md-body[data-theme="dark-code"] hr {
+  background: none;
+  border-top: 1px dashed var(--rule-strong);
+}
+
+.md-body[data-theme="dark-code"] pre {
+  box-shadow: inset 0 1px 0 rgba(94, 234, 212, 0.1), 0 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+.md-body[data-theme="dark-code"] pre.code-block::before {
+  opacity: 0.78;
+}
+
+.md-body[data-theme="dark-code"] code {
+  border: 1px solid rgba(125, 211, 252, 0.12);
+}
+
+.md-body[data-theme="dark-code"] pre code {
+  border: 0;
+}
+
+.md-body[data-theme="dark-code"] th {
+  color: var(--accent);
+}
+
+.md-body[data-theme="dark-code"] td {
+  border-bottom-color: var(--rule);
+}
+
+.md-body[data-theme="dark-code"] tbody tr:hover td {
+  background: rgba(94, 234, 212, 0.035);
+}
+
+.md-body[data-theme="dark-code"] kbd {
+  border-color: var(--rule-strong);
+  background: var(--code-bg);
+  color: var(--code-ink);
+}
+
+.md-body[data-theme="dark-code"] img {
+  border: 1px solid var(--rule);
+}
+
+.md-body[data-theme="dark-code"] details {
+  border-color: var(--rule-strong);
+}
